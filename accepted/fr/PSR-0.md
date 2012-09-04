@@ -3,14 +3,14 @@ La section suivante décrit les exigences obligatoires qui doivent être respect
 Obligatoire
 ---------
 
-* Une classe ou namespace complètement qualifiée doivent disposer de la structure suivante
-  `\<Nom du Vendor>\(<Namespace>\)*<Nom de la Classe>`.
-* Chaque namespace doit avoir un namespace racine. ("Nom du Vendor").
-* Chaque namespace peut avoir autant de sous-namespace qu'il le souhaite.
-* Chaque séparateur de namespace est converti en  `DIRECTORY_SEPARATOR` lors du chargement à partir du système de fichiers.
-* Chaque "\_" dans le nom d'une CLASSE est convertis en `DIRECTORY_SEPARATOR`. Le caractère "\_" n'a pas de signification particulière dans le namespace.
-* Les classes et namespace complètement qualifiés sont suffixés avec ".php" lors du chargement à partir du système de fichier.
-* Les caractères alphabétiques dans les noms de vendors, namespace et noms de classes peuvent contenir n'importe quelle combinaison de minuscules et de majuscules.
+* Une classe ou espace de noms complètement qualifiée doivent disposer de la structure suivante
+  `\<Nom du Vendor>\(<Espace de noms>\)*<Nom de la Classe>`.
+* Chaque espace de noms doit avoir un espace de noms racine. ("Nom du Vendor").
+* Chaque espace de noms peut avoir autant de sous-espace de noms qu'il le souhaite.
+* Chaque séparateur d'un espace de noms est converti en  `DIRECTORY_SEPARATOR` lors du chargement à partir du système de fichiers.
+* Chaque "\_" dans le nom d'une CLASSE est convertis en `DIRECTORY_SEPARATOR`. Le caractère "\_" n'a pas de signification particulière dans un espace de noms.
+* Les classes et espace de noms complètement qualifiés sont suffixés avec ".php" lors du chargement à partir du système de fichier.
+* Les caractères alphabétiques dans les noms de vendors, espace de noms et noms de classes peuvent contenir n'importe quelle combinaison de minuscules et de majuscules.
 
 Exemples
 --------
@@ -20,11 +20,11 @@ Exemples
 * `\Zend\Acl` => `/chemin/vers/projet/lib/vendor/Zend/Acl.php`
 * `\Zend\Mail\Message` => `/chemin/vers/projet/lib/vendor/Zend/Mail/Message.php`
 
-Sous-tiret dans les Namespaces et Noms de Classes
+Sous-tiret dans les espaces de noms et Noms de Classes
 -----------------------------------------
 
-* `\namespace\package\Class_Name` => `/chemin/vers/projet/lib/vendor/namespace/package/Class/Name.php`
-* `\namespace\package_name\Class_Name` => `/chemin/vers/projet/lib/vendor/namespace/package_name/Class/Name.php`
+* `\espace de noms\package\Class_Name` => `/chemin/vers/projet/lib/vendor/espace de noms/package/Class/Name.php`
+* `\espace de noms\package_name\Class_Name` => `/chemin/vers/projet/lib/vendor/espace de noms/package_name/Class/Name.php`
 
 Les normes que nous établissons ici doivent être les moins douloureuses afin de permettre une interopérabilité avec un autoloader. Vous pouvez vérifier que vous respectez ces normes via l'utilisation de l'implémentation d'exemple de SplClassLoader qui est capable de charger les classes PHP 5.3.
 
