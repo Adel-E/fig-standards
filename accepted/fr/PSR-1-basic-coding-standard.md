@@ -3,7 +3,7 @@ La norme de codage de base
 
 Cette section de la norme comprend ce qu'il convient de prendre en compte des éléments standards de codage nécessaires pour assurer un niveau élevé d'interopérabilité technique pour le partage du Code PHP.
 
-Les mots clés "DOIT", "NE DOIT PAS", "REQUIE", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDER", "MAY" et "OPTIONEL" dans ce document doivent être interprétés comme décrit dans [RFC 2119][].
+Les mots clés "DOIT", "NE DOIT PAS", "REQUIS", "DEVRA", "NE DEVRA PAS", "DEVRAIT", "NE DEVRAIT PAS", "RECOMMENDER", "POUVOIR" et "OPTIONEL" dans ce document doivent être interprétés comme décrit dans [RFC 2119][].
 
 [RFC 2119]: http://www.ietf.org/rfc/rfc2119.txt
 [PSR-0]: https://github.com/lesmyrmidons/fig-standards/accepted/fr/PSR-0.md
@@ -15,9 +15,9 @@ Les mots clés "DOIT", "NE DOIT PAS", "REQUIE", "SHALL", "SHALL NOT", "SHOULD", 
 
 - Les fichiers de code PHP DOIVENT encoder uniquement en UTF-8 sans BOM.
 
-- Files SHOULD *either* declare symbols (classes, functions, constants, etc.)
-	24 	*or* cause side-effects (e.g. generate output, change .ini settings, etc.)
-	25 	but SHOULD NOT do both.
+- Les fichiersFiles SHOULD *either* declare symbols (classes, fonctions, constantes, etc.)
+*or* cause side-effects (e.g. générer une sortie, modifier les règlages .ini, etc.)
+mais ne devra pas faire les deux.
 
 2. Files
 --------
