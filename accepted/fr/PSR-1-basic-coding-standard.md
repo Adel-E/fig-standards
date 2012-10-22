@@ -79,8 +79,12 @@ if (! function_exists('bar')) {
 }
 ```
 
-3. Namespace and Class Names
-----------------------------
+3. Espaces de Nom et Noms des Classes
+-------------------------------------
+
+Les espaces de nom et les classes DOIVENT suivre [PSR-0][].
+
+Cela signifie que chaque classe se trouve dans un fichier en lui-même, et se dans un espace de nom d'au moins un niveau : le nom d'un vendor de plus haut niveau.
 
 4. Class Constants, Properties, and Methods
 -------------------------------------------
