@@ -15,7 +15,7 @@ Les mots clés "DOIT", "NE DOIT PAS", "REQUIS", "DEVRA", "NE DEVRA PAS", "DEVRAI
 
 - Les fichiers de code PHP DOIVENT être encodé uniquement en UTF-8 sans BOM.
 
-- Les fichiersFiles SHOULD *either* declare symbols (classes, fonctions, constantes, etc.)
+- Files SHOULD *either* declare symbols (classes, fonctions, constantes, etc.)
 *or* cause side-effects (e.g. générer une sortie, modifier les règlages .ini, etc.)
 mais ne devra pas faire les deux.
 
@@ -40,7 +40,7 @@ Tous le code PHP DOIT uniquement utiliser les tag's long `<?php ?>` ou bien uniq
 Le code PHP DOIT utiliser uniquement UTF-8 sans BOM.
 
 ### 2.3. Les effets secondaires
-
+// TODO
 
 ```php
 <?php
@@ -60,7 +60,7 @@ function foo()
 }
 ```
 
-
+L'exemple suivant est un fichier qui contient des déclarations sans effets secondaires, c'est à dire, un exemple à émuler :
 
 ```php
 <?php
@@ -86,5 +86,58 @@ Les espaces de nom et les classes DOIVENT suivre [PSR-0][].
 
 Cela signifie que chaque classe se trouve dans un fichier en lui-même, et se dans un espace de nom d'au moins un niveau : le nom d'un vendor de plus haut niveau.
 
+Les noms de classes DOIVENT être déclarées comme `StudlyCaps`.
+
+Le code écrit pour PHP 5.3 et après DOIT utiliser les espaces de noms formel.
+
+Par exemple :
+```php
+<?php
+// PHP 5.3 and later:
+namespace Vendor\Model;
+
+class Foo
+{
+}
+```
+
+Le code écrit pour 5.2.x et avant DEVRAIT utiliser la convention pseudo-espace de nom `Vendor_` préfixés par les noms de classe.
+
+```php
+<?php
+// PHP 5.2.x and earlier:
+class Vendor_Model_Foo
+{
+}
+```
+
 4. Class Constants, Properties, and Methods
 -------------------------------------------
+
+Le terme « classe » se réfère à toutes les classes, les interfaces et les traits.
+
+### 4.1. Les Constantes
+
+Les constantes de classe DOIVENT être déclarée en majuscules avec un tiret bas séparateurs.
+Par exemple :
+
+```php
+<?php
+namespace Vendor\Model;
+
+class Foo
+{
+    const VERSION = '1.0';
+    const DATE_APPROVED = '2012-06-01';
+}
+```
+
+### 4.2. Les Propriétés
+
+Ce guide évite intentionnellement toute recommandation concernant l'utilisation des noms de propriétés `$StudlyCaps`, `$camelCase` ou `$under_score`
+
+Quelle que soit la convention de nommage est utilisé, elle DOIT être appliquées de manière cohérente dans un cadre raisonnable. Cette portée peut être au vendor-level, package-level, class-level ou method-level.
+
+### 4.3. Les Méthodes
+
+Les noms de méthodes DOIVENT être déclarées comme `camelCase()`.
