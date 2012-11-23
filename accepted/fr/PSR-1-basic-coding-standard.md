@@ -15,9 +15,9 @@ Les mots clés "DOIT", "NE DOIT PAS", "REQUIS", "DEVRA", "NE DEVRA PAS", "DEVRAI
 
 - Les fichiers de code PHP DOIVENT être encodé uniquement en UTF-8 sans BOM.
 
-- Files SHOULD *either* declare symbols (classes, fonctions, constantes, etc.)
-*or* cause side-effects (e.g. générer une sortie, modifier les règlages .ini, etc.)
-mais ne devra pas faire les deux.
+- Files SHOULD *either* declare symbols (classes, functions, constants, etc.)
+  *or* cause side-effects (e.g. generate output, change .ini settings, etc.)
+  but SHOULD NOT do both. //TODO
 
 - Les espaces de noms et les classes DOIVENT suivre [PSR-0][].
 
@@ -91,6 +91,7 @@ Les noms de classes DOIVENT être déclarées comme `StudlyCaps`.
 Le code écrit pour PHP 5.3 et après DOIT utiliser les espaces de noms formel.
 
 Par exemple :
+
 ```php
 <?php
 // PHP 5.3 and later:
