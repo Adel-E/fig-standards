@@ -3,7 +3,11 @@ La norme de codage de base
 
 Cette section de la norme comprend ce qu'il convient de prendre en compte des éléments standards de codage nécessaires pour assurer un niveau élevé d'interopérabilité technique pour le partage du Code PHP.
 
+<<<<<<< HEAD
 Les mots clés "DOIT", "NE DOIT PAS", "REQUIS", "DEVRA", "NE DEVRA PAS", "DEVRAIT", "NE DEVRAIT PAS", "RECOMMENDER", "POUVOIR" et "OPTIONEL" dans ce document doivent être interprétés comme décrit dans [RFC 2119][].
+=======
+Les mots clés "DOIT", "NE DOIT PAS", "REQUIS", "DEVRA", "NE DEVRA PAS", "DEVRAIT", "NE DEVRAIT PAS", "RECOMMENDER", "POUVOIR" et "OPTIONNEL" dans ce document doivent être interprétés comme décrit dans [RFC 2119][].
+>>>>>>> 37fd26b270ec124e258b91be64564fc505822a1f
 
 [RFC 2119]: http://www.ietf.org/rfc/rfc2119.txt
 [PSR-0]: https://github.com/lesmyrmidons/fig-standards/accepted/fr/PSR-0.md
@@ -91,7 +95,10 @@ Les noms de classes DOIVENT être déclarées comme `StudlyCaps`.
 Le code écrit pour PHP 5.3 et après DOIT utiliser les espaces de noms formel.
 
 Par exemple :
+<<<<<<< HEAD
 
+=======
+>>>>>>> 37fd26b270ec124e258b91be64564fc505822a1f
 ```php
 <?php
 // PHP 5.3 and later:
